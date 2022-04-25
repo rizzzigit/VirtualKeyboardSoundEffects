@@ -6,7 +6,7 @@ const path_1 = tslib_1.__importDefault(require("path"));
 const child_process_1 = tslib_1.__importDefault(require("child_process"));
 const inputPath = '/dev/input/by-path';
 function playSound(path) {
-    child_process_1.default.exec(`aplay ${path}`, (error) => error && console.error(error));
+    child_process_1.default.exec(`aplay "${path}"`, (error) => error && console.error(error));
 }
 async function listInputs() {
     return (await fs_1.default.promises.readdir(inputPath)).map((inputFile) => path_1.default.join(inputPath, inputFile));

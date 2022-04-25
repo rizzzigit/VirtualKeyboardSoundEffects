@@ -5,7 +5,7 @@ import ChildProcess from 'child_process'
 const inputPath = '/dev/input/by-path'
 
 function playSound (path: string) {
-  ChildProcess.exec(`aplay ${path}`, (error) => error && console.error(error))
+  ChildProcess.exec(`aplay "${path}"`, (error) => error && console.error(error))
 }
 
 async function listInputs () {
