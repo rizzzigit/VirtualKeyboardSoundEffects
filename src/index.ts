@@ -1,3 +1,5 @@
+#!/bin/env node
+
 import FS from 'fs'
 import Path from 'path'
 import ChildProcess from 'child_process'
