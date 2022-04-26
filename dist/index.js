@@ -1,10 +1,12 @@
 #!/bin/env node
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const tslib_1 = require("tslib");
-const fs_1 = tslib_1.__importDefault(require("fs"));
-const path_1 = tslib_1.__importDefault(require("path"));
-const child_process_1 = tslib_1.__importDefault(require("child_process"));
+const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
+const child_process_1 = __importDefault(require("child_process"));
 const inputPath = '/dev/input/by-path';
 function playSound(path) {
     child_process_1.default.exec(`aplay "${path}"`, (error) => error && console.error(error));
