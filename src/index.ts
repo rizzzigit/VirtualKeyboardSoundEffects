@@ -23,11 +23,11 @@ async function findMousePath () {
 }
 
 function getMouseSoundFile (action: 'down' | 'up') {
-  return Path.join(process.cwd(), `res/mouse/${action}.wav`)
+  return Path.join(__dirname, `../res/mouse/${action}.wav`)
 }
 
 function getKeyboardSoundFile (index: number, action: 'down' | 'up') {
-  return Path.join(process.cwd(), `res/keyboard/variant${
+  return Path.join(__dirname, `../res/keyboard/variant${
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 203, 200, 208, 205, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 87, 88, 210, 211].includes(index)
       ? 1
       : index === 57
